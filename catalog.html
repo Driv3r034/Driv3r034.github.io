@@ -8,30 +8,31 @@
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
     <script src="script.js"></script>
 </head>
-<body>
+  <body>
     <div class="container">
-      <div class="header">
-        <span class="logo">
-          <a href="index.html">
-          <img src="img/Логотип.png" width="250" height="160" alt="Логотип Trigger Group"></a>
-        </span>
-        <p>Решения с выгодой для вас</p>
-        <aside>
-          <a href="tel:+7(795)987-67-67">+7(795)987-67-67</a>
-        </aside>
-      </div>  <!-- end class="header" -->    
-        <header>
-          <nav class="top">   
-            <ol>
-              <li><a href="index.html">Продажа зарубежной недвижимости</a> <!-- index.html -->
-              <li><a href="about.html">О компании и сотрудниках</a>
-              <li><a href="catalog.html">Каталог с перечнем объектов</a>
-              <li><a href="contact.html">Контакты</a>
-              <li><a href="service.html">Услуги</a>
-            </ol>
-          </nav>
-        </header>
-        <br />
+      <header>
+        <div class="cols">
+          <div class="col">
+            <span class="logo">
+              <a href="index.html">
+              <img src="img/Логотип.png" width="250" height="160" alt="Логотип Trigger Group"></a>
+            </span>
+            <p>Решения с выгодой для вас</p>
+          </div>  <!-- end class="col" -->    
+          <div class="col">
+            <nav class="top">   
+              <ol>
+                <li><a href="index.html">Главная</a> <!-- index.html -->
+                <li><a href="about.html">О компании</a>
+                <li><a href="catalog.html">Каталог</a>
+                <li><a href="contact.html">Контакты</a>
+                <li><a href="service.html">Услуги</a>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </header>
+        <br>
       <div class="container2">
         <div class="navigation">
           <h1>Каталог</h1>
@@ -40,7 +41,7 @@
           <input type="text" name="param1" placeholder="Общая площадь (м2)" />  <br />
           <input type="text" name="param2" placeholder="Цена от, ₽" />  <br />
           <input type="text" name="param2" placeholder="до" />  <br /> 
-          <p>Сколько комнат нужно?</p>
+          <p>Количество комнат</p>
           <label> <input type="checkbox" name="ch1" value="1" />Студия </label>
           <br /> 
           <input type="checkbox" name="ch3" value="3" />Однокомнатная  <br /> 
@@ -48,6 +49,9 @@
           <input type="checkbox" name="ch3" value="3" />Трехкомнатная  <br /> 
           <input type="checkbox" name="ch3" value="3" />Четырехкомнатная  <br /> 
           <br />
+          <span>
+            <em>Район города</em>
+          </span>
           <select name=city >
             <option value="1" selected >Север</option>
             <option value="2">Юг</option>
@@ -60,78 +64,116 @@
           <div class="center">
             <h2>Выберите интересующие вас разделы и найдите свой объект!</h2>
           </div>
-            <div class="container">
-              <div class="catalog-section_img">
-                <img src="img/Квартиры.png" width="200" height="140" alt="Квартиры">
-              </div>  <!-- end class="img" -->
-                <div class="catalog-section_content">
-                  <p>Квартиры 6 объектов</p>
-                </div>  <!-- end class="content" -->
-              <div class="catalog-section_img">
-                <img src="img/Новостройки.png" width="200" height="140" alt="Новостройки">
-              </div>  <!-- end class="img" -->
-                <div class="catalog-section_content">
-                  <p>Новостройки 77 объектов</p>
-                </div>  <!-- end class="content" -->
-              <div class="catalog-section_img">
-                <img src="img/Коммерческаянедвижимость.png" width="200" height="140" alt="Коммерческая недвижимость">
-              </div>  <!-- end class="img" -->
-                <div class="catalog-section_content">
-                  <p>Коммерческая недвижимость</p>
-                </div>  <!-- end class="content" -->
-              <div class="catalog-section_img">
-                <img src="img/Загороднаянедвижимость.png" width="200" height="140" alt="Загородная недвижимость">
-              </div>  <!-- end class="img" -->
-                  <div class="catalog-section_content">
-                    <p>Загородная недвижимость</p>
-                  </div>  <!-- end class="content" -->
-              <div class="catalog-section_img">
-                <img src="img/Аренда.png" width="200" height="140" alt="Аренда">
-              </div>  <!-- end class="img" -->
-                  <div class="catalog-section_content">
-                    <p>Аренда</p>
-                  </div>  <!-- end class="content" -->    
-            </div> <!-- end class="container" -->
-            <hr />
-                <div>
-                  <h2 class="h1">Срочная продажа</h2>
-                </div>
-                <div class="footer 2">
-                  <h4>Выгодные предложения - ловите момент!</h4>
-                </div>
-                <div class="container">
-                  <div class="catalog-section_img">
-                    <img src="img/4хкомнатнаявновостройке120м2.png" width="200" height="140" alt="Concept House 25 771 368 р.">
-                  </div>  <!-- end class="img" -->
-                    <div class="catalog-section_content">
-                      <p>Квартиры 6 объектов</p>
-                    </div>  <!-- end class="catalog-section_content" -->
-                  <div class="catalog-section_img">
-                    <img src="img/4-кквартиравновостройке,126кв.м..png" width="200" height="140" alt="Concept House 25 215 578 р.">
-                  </div>  <!-- end class="img" -->
-                    <div class="catalog-section_content">
-                      <p>Новостройки 77 объектов</p>
-                    </div>  <!-- end class="catalog-section_content" -->
-                  <div class="catalog-section_img">
-                    <img src="img/2-кквартиравновостройке,89кв.м..png" width="200" height="140" alt="Concept House 18 896 316 р.">
-                  </div>  <!-- end class="img" -->
-                    <div class="catalog-section_content">
-                      <p>Коммерческая недвижимость</p>
-                    </div>  <!-- end class="catalog-section_content" -->
-                  <div class="catalog-section_img">
-                    <img src="img/3-кквартиравновостройке,112кв.м..png" width="200" height="140" alt="Concept House 24 190 000 р.">
-                  </div>  <!-- end class="img" -->
-                      <div class="catalog-section_content">
-                        <p>Загородная недвижимость</p>
-                      </div>  <!-- end class="catalog-section_content" -->
-                  <div class="catalog-section_img">
-                    <img src="img/Аренданедвижимости,таунхаус.jpg" width="200" height="140" alt="Concept House 90 000 р./в месяц">
-                  </div>  <!-- end class="img" -->
-                      <div class="catalog-section_content">
-                        <p>Аренда</p>
-                      </div>  <!-- end class="catalog-section_content" -->
-                </div>  <!-- end class="container" --> 
-              <main id="company">
+          <div class="servises">
+            <div class="product">
+              <h2 class="product-name">Студия</h2>
+              <span class="product-desc">Студия с панорамным видом на море.
+                  Готовая полностью меблированная студия с потрясающим 
+                  видом на море, в 50метрах от променада и пристани для яхт. 
+                  Квартира площадью 39 м2 расположенна в новом здании 
+                  постройки 2020 года, на второй линии от моря, и полностью 
+                  оборудованна мебелью и бытовой техникой, готова к 
+                  проживанию.</span><br>
+              <img src="img/студия.jpg" width="350" height="300" class="product-img" alt="квартира студия">
+              <div class="offer">
+                  <span class="product-price">21 600 001</span>
+                  <span class="product-price-currency">RUB</span>
+              </div>
+                      <span class="product-address"><a href="#">у моря, в пригороде</a></span>
+              <span class="product-map"><a href="#">Показать на карте</a></span>
+              <span class="product-rooms">1 комнатная</span>
+              <span class="product-square">39 кв.м.</span>
+              <span class="product-type-house">Кирпичный</span>
+              <span class="product-level">6 этаж</span>
+            </div>
+            <div class="product">
+              <h2 class="product-name">Однокомнатная квартира</h2>
+              <span class="product-desc">Квартира подходит как для комфортного проживания 
+                  одного человека или пары. В этом комплексе большое 
+                  количество объектов недвижимости. Планировка включает 
+                  жилую и обеденную зону открытого плана, одну спальню 
+                  с двухспальной кроватью, душевую комнату и две террасы. 
+                  В стоимость также входит машиноместо на охраняемой 
+                  парковке.</span><br>
+              <img src="img/однокомнатная.png" width="350" height="300" class="product-img" alt="однокомнатная квартира">
+              <div class="offer">
+                  <span class="product-price">27 041 305</span>
+                  <span class="product-price-currency">RUB</span>
+              </div>
+              <span class="product-address"><a href="#">Smart City, Kamkara</a></span>
+              <span class="product-map"><a href="#">Показать на карте</a></span>
+              <span class="product-rooms">1 комнатная</span>
+              <span class="product-square">60 кв.м.</span>
+              <span class="product-type-house">Монолитный</span>
+              <span class="product-level">1 этаж</span>
+            </div>
+            <div class="product">
+              <h2 class="product-name">Двухкомнатная квартира</h2>
+              <span class="product-desc">Внутренние пространства резиденций будут максимально 
+                увеличены благодаря роскошной отделке, а огромные 
+                окна от пола до потолка подчеркнут потрясающий вид. 
+                Тщательно спланированные зоны объединяют в себе череду 
+                привлекательных пространств, включая частные зоны, 
+                где есть место для отдыха, восстановления или 
+                общения.</span><br>
+              <img src="img/двухкомнатная.jpg" width="350" height="300" class="product-img" alt="двухкомнатная квартира">
+              <div class="offer">
+                  <span class="product-price">33 789 897</span>
+                  <span class="product-price-currency">RUB</span>
+              </div>
+              <span class="product-address"><a href="#">у моря, в большом городе</a></span>
+              <span class="product-map"><a href="#">Показать на карте</a></span>
+              <span class="product-rooms">2-х комнатная</span>
+              <span class="product-square">90 кв.м.</span>
+              <span class="product-type-house">Кирпично-Монолитный</span>
+              <span class="product-level">34 этаж</span>
+            </div>
+            <div class="product">
+              <h2 class="product-name">Трехкомнатная квартира</h2>
+              <span class="product-desc">Квартира расположена на 2 этаже. Продается 
+                  c евро ремонтом, с современной мебелью и 
+                  с установленной бытовой техникой и кухонной 
+                  гарнитурой. Кухня американского типа (кухня 
+                  совмещена с гостиной комнатой), 1 ванная 
+                  комната, 2 спальные комнаты с чудесным видом 
+                  с одной стороны на загадочные горы, с другой стороны 
+                  на береговую линию.</span><br>
+              <img src="img/трехкомнатная.png" width="350" height="300" class="product-img" alt="трехкомнатная квартира">
+              <div class="offer">
+                  <span class="product-price">36 418 930</span>
+                  <span class="product-price-currency">RUB</span>
+              </div>
+              <span class="product-address"><a href="#">в горах, в пригороде</a></span>
+              <span class="product-map"><a href="#">Показать на карте</a></span>
+              <span class="product-rooms">3-х комнатная</span>
+              <span class="product-square">120 кв.м.</span>
+              <span class="product-type-house">Панельный</span>
+              <span class="product-level">2 этаж</span>
+            </div>
+            <div class="product">
+              <h2 class="product-name">Четырехкомнатная квартира</h2>
+              <span class="product-desc">Представляем Вашему вниманию квартиры 
+                в новом комплексе, с шикарной панорамой 
+                на Средиземное море в районе Кардж. Комплекс 
+                состоит из двух блоков низкой постройки, 
+                который находится на возвышенности, 
+                благодаря чему из большинства квартир 
+                открывается чудесный вид на Средиземное 
+                море и горы Топорос.</span><br>
+              <img src="img/четырехкомнатная.png" width="350" height="300" class="product-img" alt="четырехкомнатная квартира">
+              <div class="offer">
+                  <span class="product-price">42 219 333</span>
+                  <span class="product-price-currency">RUB</span>
+              </div>
+              <span class="product-address"><a href="#">у моря, в пригороде</a></span>
+              <span class="product-map"><a href="#">Показать на карте</a></span>
+              <span class="product-rooms">4-х комнатная</span>
+              <span class="product-square">145 кв.м.</span>
+              <span class="product-type-house">Блочный</span>
+              <span class="product-level">1 этаж</span>
+            </div>
+          </div>
+              <main id="comp">
                 <p>Компания TRIGGER GROUP поможет вам арендовать или <strong class="partner">купить квартиру в европе.</strong> Мы подберем жилье, которое устроит по цене, 
                   расположению, уровню комфорта, организуем встречу с владельцем, обеспечим полное юридическое сопровождение сделки. Наши 
                   специалисты окажут содействие при оформлении ипотеки и ответят на все вопросы. Результат вас порадует!</p>
@@ -238,5 +280,5 @@
           </div>  <!-- end class="container" -->
         </footer>  <!-- end class="f print-hidden" -->
     </div> <!-- end class="container" -->
-</body>
+  </body>
 </html>

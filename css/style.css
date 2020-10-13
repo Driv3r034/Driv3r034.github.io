@@ -1,45 +1,82 @@
-nav{
-    background: rgba(99, 240, 80, 0.4);  
-    }
-    nav a:link {color:rgb(192, 109, 31);}
-    nav a:visited  {color:rgb(170, 86, 219);}
-    nav a:active {color:rgb(171, 231, 174);}
-    li {
-    text-decoration:none; /*Убираем стандартное подчёркивание ссылки если оно ещё не убрано*/
-    display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
-    line-height: 1; /*Задаём высоту строки (можно в пикселях)*/
-    color:#2F73B6;/*Задаём цвет ссылки*/
-    }
-    li:after {
-    display: block; /*превращаем его в блочный элемент*/
-    content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
-    height: 2px; /*задаём высоту линии*/
-    width: 0%; /*задаём начальную ширину элемента (линии)*/
-    background-color: #000000; /*цвет фона элемента*/
-    transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
-    }
-    li:hover:after,
-    li:focus:after {
-    width: 100%;
-    }
-    li:hover{
-    color:#225384;
-    } 
-li{
-    list-style-type: none; /* Убираем маркеры */
-    float:left; /*Размещаем список горизонтально для реализации меню*/
-    margin-right:5px; /*Добавляем отступ у пунктов меню*/
-    
-   }
+body{
+  display: flex;
+  align-items: center;
+  margin: 0.5px;
+}
+header{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background: beige;
+  width: 100%;
+}
 ol{
-    margin-left: 0; /* Отступ слева в браузере IE и Opera */
-    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
-    background: #b3d810;
-   }
-   header{
-       background: lightcoral;
-       width: 100%;
-       height: 25px;
-       margin: -2px 0 5px;
-       padding: 15px 0 5px;       
-   }
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li{
+  display: block;
+  padding: 0 80px;
+  font-size: 25px;
+  font-family: sans-serif;
+  transition: 5s;
+}
+li a{
+  text-decoration: none;
+  color: rgb(2, 131, 131);
+  transition: 1s;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+}
+ol:hover li a{
+  filter: blur(5px);
+}
+ol:hover li a:hover{
+  font-size: 30px;
+  filter: blur(0px);
+  background-color: #e7f8fa;
+  text-decoration: underline;
+}
+.logo{
+  float: left;
+  padding: 10px;
+}
+.top{
+  float: inline-start;
+}
+/* стили класса «product» */
+
+.servises{
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  margin: auto;
+  padding-top: 4rem;
+  text-align: center;
+}
+.product-name{
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.product-desc {
+  padding-bottom: 5rem;      
+}
+.product{
+  white-space: pre-line;
+  float: left;
+  width: 29%;
+  border: solid 1px lightslategray;
+  margin: 0.5%;
+  padding: 1.6%;
+  background-color: rgb(197, 179, 179);  
+}
+
+#comp{
+  margin-top: 1720px;
+}
+
+h2{
+  text-align: center;
+}
