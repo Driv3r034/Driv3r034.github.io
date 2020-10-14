@@ -1,0 +1,82 @@
+body{
+  display: flex;
+  align-items: center;
+  margin: 0.5px;
+}
+header{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background: beige;
+  width: 100%;
+}
+ol{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li{
+  display: block;
+  padding: 0 80px;
+  font-size: 25px;
+  font-family: sans-serif;
+  transition: 5s;
+}
+li a{
+  text-decoration: none;
+  color: rgb(2, 131, 131);
+  transition: 1s;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+}
+ol:hover li a{
+  filter: blur(5px);
+}
+ol:hover li a:hover{
+  font-size: 30px;
+  filter: blur(0px);
+  background-color: #e7f8fa;
+  text-decoration: underline;
+}
+.logo{
+  float: left;
+  padding: 10px;
+}
+.top{
+  float: inline-start;
+}
+/* стили класса «product» */
+
+.servises{
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  margin: auto;
+  padding-top: 4rem;
+  text-align: center;
+}
+.product-name{
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.product-desc {
+  padding-bottom: 5rem;      
+}
+.product{
+  white-space: pre-line;
+  float: left;
+  width: 29%;
+  border: solid 1px lightslategray;
+  margin: 0.5%;
+  padding: 1.6%;
+  background-color: rgb(197, 179, 179);  
+}
+
+#comp{
+  margin-top: 1720px;
+}
+
+h2{
+  text-align: center;
+}
