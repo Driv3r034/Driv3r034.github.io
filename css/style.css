@@ -1,4 +1,7 @@
-
+* {
+  margin: 0;
+  padding: 0;
+}
 body{
   display: flex;
   align-items: center;
@@ -6,10 +9,14 @@ body{
 }
 header{
   display: flex;
-  justify-content: left;
-  align-items: center;
-  background: beige;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: rgba(246, 247, 248, 0.596);
   width: 100%;
+}
+.col2{
+  margin-top: 40px;
+  margin-left: 300px;
 }
 ol{
   list-style: none;
@@ -21,12 +28,13 @@ li{
   display: block;
   padding: 0 80px;
   font-size: 25px;
+  text-transform: uppercase;
   font-family: sans-serif;
   transition: 5s;
 }
 li a{
   text-decoration: none;
-  color: rgb(2, 131, 131);
+  color: rgb(0, 0, 0);
   transition: 1s;
   padding: 10px;
   display: inline-block;
