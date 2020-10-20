@@ -83,7 +83,32 @@ ol:hover li a:hover{
 }
 
 #comp{
-  margin-top: 1720px;
+  display: flex;
+  border-collapse: collapse;
+  margin: 1720px 45px 45px 50px;
+  align-items: left;
+  text-align: justify;
+}
+
+.leftimg{
+  float: right;
+  margin: 7px 7px 7px 5px;
+}
+.text{
+  clear: right;
+}
+.staff{
+    display: flex;
+    border-collapse: collapse;
+    width: 100%;
+}
+.staff_foto{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 }
 
 h2{
