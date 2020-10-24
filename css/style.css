@@ -86,7 +86,7 @@ ol:hover li a:hover{
   display: flex;
   border-collapse: collapse;
   margin: 1720px 45px 45px 50px;
-  align-items: left;
+  align-items: center;
   text-align: justify;
 }
 
@@ -98,19 +98,75 @@ ol:hover li a:hover{
   clear: right;
 }
 .staff{
-    display: flex;
-    border-collapse: collapse;
-    width: 100%;
+  display: flex;
+  border-collapse: collapse;
+  width: 100%;
 }
 .staff_foto{
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h2{
   text-align: center;
+}
+
+
+
+
+
+
+
+
+.section2{
+  display: flex;
+  border: solid 3px lightslategray;
+}
+
+
+
+.f_print-hidden{
+  margin: 5px;
+  padding: 0 10px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  border: solid 5px rgb(38, 92, 3);
+}
+.w{
+  margin: 10px;
+  display: flex;
+  border: solid 3px lightslategray;
+}
+.row-grid{
+  margin: 10px;
+  display: flex;
+  border: solid 3px lightslategray;
+}
+.col-left{
+  margin: 10px;
+  display: flex;
+  border: solid 3px lightslategray;
+}
+.col-center{
+  margin: 10px;
+  display: flex;
+  border: solid 3px lightslategray;
+}
+.col-right{
+  margin: 10px;
+  display: flex;
+  border: solid 3px lightslategray;
+}
+.contacts{
+  margin: 10px;
+  display: flex;
+  border: solid 3px lightslategray;
 }
