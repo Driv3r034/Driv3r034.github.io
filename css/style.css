@@ -10,22 +10,36 @@ body{
 header{
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
-  background: rgba(246, 247, 248, 0.596);
+  align-items: center;
+  background: rgba(15, 112, 209, 0.596);
+  width: auto;
+}
+/*  стили header ------------------ */
+.column{
+  display: flex;
   width: 100%;
 }
-.col2{
-  margin-top: 40px;
-  margin-left: 300px;
+.col4{
+  display: flex;
+  width: 20%;
 }
+.col3{
+  display: flex;
+  width: 80%;
+  margin-left: 174px;
+  margin-top: 40px;
+  justify-content: start;
+}
+
+/*  стили header ------------------ */
 ol{
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 li{
-  display: block;
+  display: flex;
   padding: 0 80px;
   font-size: 25px;
   text-transform: uppercase;
@@ -37,7 +51,7 @@ li a{
   color: rgb(0, 0, 0);
   transition: 0.4s;
   padding: 5px;
-  display: inline-block;
+  display: flex;
   border-radius: 10px;
 }
 ol:hover li a{
@@ -49,10 +63,7 @@ ol:hover li a:hover{
   background-color: #e7f8fa;
   text-decoration: underline;
 }
-.logo{
-  float: left;
-  padding: 10px;
-}
+
 .top{
   float: inline-start;
 }
@@ -60,7 +71,7 @@ ol:hover li a:hover{
 .container2{
   margin-top: 85px;
 }
-/* стили класса «product» */
+/* стили класса «product» --------------------------- */
 
 .servises{
   background-color: rgb(255, 255, 255);
@@ -85,7 +96,6 @@ ol:hover li a:hover{
   padding: 1.6%;
   background-color: rgb(197, 179, 179);  
 }
-
 #comp{
   display: flex;
   border-collapse: collapse;
@@ -93,7 +103,7 @@ ol:hover li a:hover{
   align-items: center;
   text-align: justify;
 }
-/* end стили класса «product» */
+/* end стили класса «product» ------------------------------ */
 
 .leftimg{
   float: right;
@@ -121,7 +131,7 @@ h2{
 
 .f_print-hidden{
   margin-top: 50px;
-  width: 117%;
+  width: auto;
   height: 300px;
   border: solid 5px rgb(78, 187, 5);
   background-color: rgb(145, 145, 145);
@@ -129,40 +139,43 @@ h2{
 .w{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   align-self: center;
   height: 299px;
-  font-size: 25px;
+  font-size: 20px;
   border: solid 3px rgb(155, 153, 38);
 }
 .row-grid{
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   align-self: center;
-  margin-left: -80px;
-  border: solid 3px rgb(54, 163, 103);
-  color: aqua;
+  border: solid 3px rgb(200, 243, 9);
 }
 .col{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  align-self: center;
+  justify-content: flex-start;
   margin: 25px;
   border: solid 3px rgb(116, 75, 211);
-  color: chartreuse;
+  color: rgb(255, 255, 255);   /* цвет адреса */
 }
 
 .menu{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  align-self: center;
-  font-size: 25px;
+  justify-content: flex-start;
+  align-items: left;
+  align-self: left;
+  font-size: 20px;
   background: lightcoral;
+  color: rgb(255, 255, 255);
+}
+.men{
+  border: solid 3px rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
