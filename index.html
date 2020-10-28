@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Продажа зарубежной недвижимости</title>  <!-- Видно во вкладках. Название страницы -->
+    <title>Продажа зарубежной недвижимости Trigger Group</title>  <!-- Видно во вкладках. Название страницы -->
     <link rel="stylesheet" href="css/style.css ">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
     <script src="script.js"></script>
@@ -31,6 +31,48 @@
           </div>
         </div>
       </header>
+
+      <div class="carousel-wrapper" style="height: 400px;">
+        <!--Карусель использует обычные ссылки для циклического просмотра каждого элемента.
+        Ссылки на самом деле нацелены на эти display: none; охватывает, поэтому наша страница не
+        прыгать как обычно при использовании ссылок перехода.-->
+        <span id="target-item-1"></span>
+        <span id="target-item-2"></span>
+        <span id="target-item-3"></span>
+        <!--Вот наша карусель.
+         У каждого есть класс 'carousel-item', который мы используем для общего стиля.
+         и класс item- #, который мы используем для управления его непрозрачностью.
+         в зависимости от того, на какой target-item- # сейчас нацелен-->
+        <div class="carousel-item item-1">
+          <!--Мы можем добавить сюда любой контент, просто убедитесь, что
+           ваш .carousel-wrapper достаточно велик, чтобы вместить весь контент.-->
+          <h2>Item 1</h2>
+          <p>Content goes here.</p>
+          <!--Вот ссылки, управляющие каруселью! Убедиться
+           href каждого из них указывает на правильный целевой элемент- #
+           так что карусель циклически.-->
+          <a class="arrow arrow-prev" href="img/карусель3.jpg"></a>
+          <a class="arrow arrow-next" href="img/карусель2.jpg"></a>
+        </div>
+        <!--А вот еще пара элементов карусели, чтобы
+         у нас есть контент, который нужно прокрутить. Обратите внимание на «легкий» класс?
+         Королевский синий - довольно темный цвет фона, поэтому мы добавим CSS
+         правило, чтобы сделать текст белым, если элемент карусели имеет этот класс-->
+        <div class="carousel-item item-2 light" style="background-color: royalblue;">
+          <h2>Item 2</h2>
+          <p>Content goes here.</p>
+          <a class="arrow arrow-prev" href="img/карусель1.jpg"></a>
+          <a class="arrow arrow-next" href="img/карусель3.jpg"></a>
+        </div>
+        <div class="carousel-item item-3">
+          <h2>Item 3</h2>
+          <p>Content goes here.</p>
+          <a class="arrow arrow-prev" href="img/карусель2.jpg"></a>
+          <a class="arrow arrow-next" href="img/карусель1.jpg"></a>
+        </div>
+      </div>
+
+
       <div class="container2">
         <div class="navigation">
           <h1>Продажа зарубежной недвижимости</h1>

@@ -6,18 +6,26 @@ body{
   display: flex;
   align-items: center;
   margin: 0.5px;
+  font-family: sans-serif;
 }
+
+.container{
+  width: 1024px;
+  margin: auto;
+  border: solid blue 2px;
+}
+
 header{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: rgba(15, 112, 209, 0.596);
+  background: rgba(194, 194, 194, 0.596);
   width: auto;
 }
 /*  стили header ------------------ */
 .column{
   display: flex;
   width: 100%;
+  font: 1em serif;
+  font-weight: 550;
 }
 .col4{
   display: flex;
@@ -26,10 +34,123 @@ header{
 .col3{
   display: flex;
   width: 80%;
-  margin-left: 174px;
-  margin-top: 40px;
-  justify-content: start;
+  margin-top: 20px;
+  justify-content: space-around;
 }
+/* стили карусели  ------------------*/
+
+/* Здесь начинается наша карусель, а основной оболочкой является
+относительно позиционированы, так что наши абсолютно позиционированные элементы
+В правильном месте. */
+.carousel-wrapper {
+  position: relative;
+
+  /* Наши абсолютно позиционированные элементы карусели охватывают ширину и
+   высота его родителя. Мы делаем их прозрачными по умолчанию, поэтому
+   что они исчезают, когда мы перебираем их с помощью стрелок. */
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    /* Вы заметили отступ в 50 пикселей слева и справа вверху? Это так
+     мы можем разместить наши стрелки! Каждый будет шириной 50 пикселей. Также,
+     Я использую пустые ссылки с фоновым изображением, чтобы ссылки
+     похожи на стрелки. Убедитесь, что вы заменили этот URL фактическим
+     URL-адрес, чтобы ссылки со стрелками не были просто прозрачными прямоугольниками. */
+    .arrow {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50px;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background: url("/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
+
+      /* Положим нашу стрелку, чтобы вернуться влево. */
+      &.arrow-prev {
+        left: 0;
+      }
+
+      /* И наша стрелка вперед направо. Поскольку я использую
+       то же изображение стрелки для обеих моих стрелок, я вращаю это
+       180 градусов, чтобы указывать в правильном направлении */
+      &.arrow-next {
+        right: 0;
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+      }
+    }
+
+    /* Мне очень нравится, как эти элементы карусели смотрятся на темном изображении
+     background, поэтому, если div .carousel-item имеет класс light,
+     мы сделаем его текст белым цветом и воспользуемся белой стрелкой вместо
+     темно-серый. Опять же, убедитесь, что это изображение стрелки где-то существует */
+    &.light {
+      color: white;
+
+      .arrow {
+        background: url("/carousel-arrow-light.png") 50% 50% / 20px no-repeat;
+      }
+    }
+
+    /* Давайте воспользуемся медиа-запросами для изменения размера стрелок.
+     на небольших устройствах.*/
+    @media (max-width: 480px) {
+      .arrow, &.light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+      }
+    }
+  }
+
+  /* Давайте установим отображение целей нашей ссылки перехода: none; так что мы не
+   заставляет браузер переходить в верхнюю часть карусели всякий раз, когда пользователь
+   нажимает на одну из наших ссылок со стрелками. Этот селектор атрибутов будет нацелен на
+   любой элемент, идентификатор которого начинается с 'target-item'. */
+  [id^="target-item"] {
+    display: none;
+  }
+
+  /* Итак, выше мы сделали все элементы карусели прозрачными, что означает
+   что при загрузке страницы у нас будет большое пустое поле там, где должна быть наша карусель.
+   Давайте установим непрозрачность нашего первого элемента на 1, чтобы он отображался вместо этого. Также,
+   мы устанавливаем его z-index равным 2, чтобы он располагался над
+   другие элементы карусели. */
+  .item-1 {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  /* Но мы не хотим, чтобы первый элемент ВСЕГДА был opacity: 1; в противном случае 
+  он будет просматриваться при переключении между элементами два и выше. */
+  *:target ~ .item-1 {
+    opacity: 0;
+  }
+
+  /* ...но если нацелен # target-item-1, нам нужен первый элемент
+   чтобы появиться, поэтому мы выбираем его с помощью селектора ~ sibling и
+   снова установив его непрозрачность на 1 :-) */
+  #target-item-1:target ~ .item-1 {
+    opacity: 1;
+  }
+
+  /* Если целью является какой-либо другой target-item- #, давайте выберем его с помощью родственного элемента
+   селектор, сделайте его плавным и поместите его поверх стопки, используя z-index: 3.
+   Здесь вы можете добавить больше целевых элементов, если в вашей карусели больше трех
+   Предметы. Возможно, стоит сразу добавить около 10 предметов. */
+  #target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+  }
+}
+
+
 
 /*  стили header ------------------ */
 ol{
@@ -40,28 +161,40 @@ ol{
 }
 li{
   display: flex;
-  padding: 0 80px;
-  font-size: 25px;
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
   text-transform: uppercase;
   font-family: sans-serif;
-  transition: 5s;
+  /* transition: 5s; */
 }
 li a{
   text-decoration: none;
   color: rgb(0, 0, 0);
-  transition: 0.4s;
-  padding: 5px;
+  /* transition: 0.4s; */
+  padding left: 5px;
+  padding right: 5px;
   display: flex;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 ol:hover li a{
   filter: blur(2px);
 }
 ol:hover li a:hover{
-  font-size: 30px;
+  font-size: 20px;
   filter: blur(0px);
-  background-color: #e7f8fa;
+  background-color: #d3d3d3;
   text-decoration: underline;
+}
+
+.col a:active{
+  color: rgb(255, 255, 255);
+}
+.col a:visited{
+  color: rgb(255, 255, 255);
+}
+.col a:link{
+  color: rgb(255, 255, 255);
 }
 
 .top{
@@ -71,38 +204,47 @@ ol:hover li a:hover{
 .container2{
   margin-top: 85px;
 }
-/* стили класса «product» --------------------------- */
+/* стили класса «product» ----------------------------------- */
 
 .servises{
   background-color: rgb(255, 255, 255);
-  width: 80%;
+  width: 97%;
   margin: auto;
   padding-top: 4rem;
   text-align: center;
+  text-align: left; 
 }
 .product-name{
   padding-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem; 
 }
 .product-desc {
-  padding-bottom: 5rem;      
+  padding-bottom: 5rem; 
+      
 }
 .product{
   white-space: pre-line;
   float: left;
-  width: 29%;
+  width: 25%;
   border: solid 1px lightslategray;
-  margin: 0.5%;
-  padding: 1.6%;
+  box-shadow: rgb(0, 0, 0) 0 0 15px;
+  border-radius: 10px;
+  margin: 2%;
+  padding: 2%;
   background-color: rgb(197, 179, 179);  
 }
 #comp{
   display: flex;
   border-collapse: collapse;
-  margin: 1720px 45px 45px 50px;
+  margin: 1700px 45px 45px 50px;
   align-items: center;
-  text-align: justify;
 }
+.text_img{
+  float: right; 
+  margin: 0 1px 1px 0;
+}
+
+
 /* end стили класса «product» ------------------------------ */
 
 .leftimg{
@@ -128,13 +270,13 @@ ol:hover li a:hover{
 h2{
   text-align: center;
 }
-
+/* стили подвала ---------------------------------------------*/
 .f_print-hidden{
   margin-top: 50px;
   width: auto;
   height: 300px;
-  border: solid 5px rgb(78, 187, 5);
-  background-color: rgb(145, 145, 145);
+  /* border: solid 5px rgb(78, 187, 5); */
+  background-color: rgb(0, 0, 0);
 }
 .w{
   display: flex;
@@ -143,8 +285,8 @@ h2{
   align-items: center;
   align-self: center;
   height: 299px;
-  font-size: 20px;
-  border: solid 3px rgb(155, 153, 38);
+  font-size: 17px; /* шрифт телефона, адреса, мыла */
+  /* border: solid 3px rgb(155, 153, 38); */
 }
 .row-grid{
   display: flex;
@@ -153,14 +295,15 @@ h2{
   justify-content: center;
   align-items: center;
   align-self: center;
-  border: solid 3px rgb(200, 243, 9);
+  /* border: solid 3px rgb(200, 243, 9); */
+  
 }
 .col{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 25px;
-  border: solid 3px rgb(116, 75, 211);
+  margin: 15px;
+  /* border: solid 3px rgb(116, 75, 211); */
   color: rgb(255, 255, 255);   /* цвет адреса */
 }
 
@@ -170,12 +313,11 @@ h2{
   justify-content: flex-start;
   align-items: left;
   align-self: left;
-  font-size: 20px;
-  background: lightcoral;
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 .men{
-  border: solid 3px rgb(255, 255, 255);
+  /* border: solid 3px rgb(255, 255, 255); */
   text-align: center;
   color: rgb(255, 255, 255);
 }
