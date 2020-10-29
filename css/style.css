@@ -39,118 +39,144 @@ header{
 }
 /* стили карусели  ------------------*/
 
-/* Здесь начинается наша карусель, а основной оболочкой является
-относительно позиционированы, так что наши абсолютно позиционированные элементы
-В правильном месте. */
-.carousel-wrapper {
+
+.carousel{
+  background-color: #222224;
+  background-image: linear-gradient(#0040ff,#252a35);
   position: relative;
-
-  /* Наши абсолютно позиционированные элементы карусели охватывают ширину и
-   высота его родителя. Мы делаем их прозрачными по умолчанию, поэтому
-   что они исчезают, когда мы перебираем их с помощью стрелок. */
-  .carousel-item {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px 50px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-
-    /* Вы заметили отступ в 50 пикселей слева и справа вверху? Это так
-     мы можем разместить наши стрелки! Каждый будет шириной 50 пикселей. Также,
-     Я использую пустые ссылки с фоновым изображением, чтобы ссылки
-     похожи на стрелки. Убедитесь, что вы заменили этот URL фактическим
-     URL-адрес, чтобы ссылки со стрелками не были просто прозрачными прямоугольниками. */
-    .arrow {
-    position: absolute;
-    top: 0;
+  width: auto;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.carousel:hover .slide:after,
+.carousel:hover .counter,
+.carousel:hover .slide:before {
+  opacity: 1;
+}
+.slide {
+  float: right;
+  position: absolute;
+  z-index: 1;
+  width: 1024px;
+  height: 400px;
+  background-color: #eee;
+  text-align: center;
+  transition: opacity 0.4s;
+  opacity: 1;
+}
+.slide:before{
+    content: attr(annot);
     display: block;
-    width: 50px;
-    height: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    background: url("/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
-
-      /* Положим нашу стрелку, чтобы вернуться влево. */
-      &.arrow-prev {
-        left: 0;
-      }
-
-      /* И наша стрелка вперед направо. Поскольку я использую
-       то же изображение стрелки для обеих моих стрелок, я вращаю это
-       180 градусов, чтобы указывать в правильном направлении */
-      &.arrow-next {
-        right: 0;
-        -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
-      }
-    }
-
-    /* Мне очень нравится, как эти элементы карусели смотрятся на темном изображении
-     background, поэтому, если div .carousel-item имеет класс light,
-     мы сделаем его текст белым цветом и воспользуемся белой стрелкой вместо
-     темно-серый. Опять же, убедитесь, что это изображение стрелки где-то существует */
-    &.light {
-      color: white;
-
-      .arrow {
-        background: url("/carousel-arrow-light.png") 50% 50% / 20px no-repeat;
-      }
-    }
-
-    /* Давайте воспользуемся медиа-запросами для изменения размера стрелок.
-     на небольших устройствах.*/
-    @media (max-width: 480px) {
-      .arrow, &.light .arrow {
-        background-size: 10px;
-        background-position: 10px 50%;
-      }
-    }
-  }
-
-  /* Давайте установим отображение целей нашей ссылки перехода: none; так что мы не
-   заставляет браузер переходить в верхнюю часть карусели всякий раз, когда пользователь
-   нажимает на одну из наших ссылок со стрелками. Этот селектор атрибутов будет нацелен на
-   любой элемент, идентификатор которого начинается с 'target-item'. */
-  [id^="target-item"] {
-    display: none;
-  }
-
-  /* Итак, выше мы сделали все элементы карусели прозрачными, что означает
-   что при загрузке страницы у нас будет большое пустое поле там, где должна быть наша карусель.
-   Давайте установим непрозрачность нашего первого элемента на 1, чтобы он отображался вместо этого. Также,
-   мы устанавливаем его z-index равным 2, чтобы он располагался над
-   другие элементы карусели. */
-  .item-1 {
-    z-index: 2;
-    opacity: 1;
-  }
-
-  /* Но мы не хотим, чтобы первый элемент ВСЕГДА был opacity: 1; в противном случае 
-  он будет просматриваться при переключении между элементами два и выше. */
-  *:target ~ .item-1 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+    font-weight: 300;
+    z-index: 12;
     opacity: 0;
+    transition: opacity 0.3s;
+    text-shadow: 0 0 1px black;
   }
-
-  /* ...но если нацелен # target-item-1, нам нужен первый элемент
-   чтобы появиться, поэтому мы выбираем его с помощью селектора ~ sibling и
-   снова установив его непрозрачность на 1 :-) */
-  #target-item-1:target ~ .item-1 {
-    opacity: 1;
-  }
-
-  /* Если целью является какой-либо другой target-item- #, давайте выберем его с помощью родственного элемента
-   селектор, сделайте его плавным и поместите его поверх стопки, используя z-index: 3.
-   Здесь вы можете добавить больше целевых элементов, если в вашей карусели больше трех
-   Предметы. Возможно, стоит сразу добавить около 10 предметов. */
-  #target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3 {
-    z-index: 3;
-    opacity: 1;
-  }
+.slide:after{
+    content: attr(slide);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 0.3s;
+    width: 100%;
+    height: 80px;
+    opacity: 0;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5));
+    text-align: left;
+    text-indent: 549px;
+    line-height: 101px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 0 1px black;
+    }
+.counter{
+  position: absolute;
+  bottom: 20px;
+  right: 1px;
+  height: 20px;
+  width: 60px;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  line-height: 21px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.faux-ui-facia{
+  top: 0;
+  right: 0;
+  float: right;
+  position: absolute;
+  margin-top:0;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.faux-ui-facia:checked {
+  z-index: 8;
+}
+.faux-ui-facia:checked + .slide {
+  opacity: 0;
+}
+.faux-ui-facia:checked:nth-child(1):checked {
+  z-index: 9;
+}
+.faux-ui-facia:nth-child(1):checked {
+  float: left;
+  z-index: 9;
+}
+.faux-ui-facia:nth-child(1):checked + .slide {
+  opacity: 1;
+}
+.faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia {
+  float: left;
+  z-index: 8;
+}
+.faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia + .slide {
+  opacity: 0;
+}
+.faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia:checked {
+  z-index: 9;
+}
+.faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia:checked + .slide {
+  opacity: 1;
 }
 
-
+/* --- Intro text --- */
+/* 
+  .intro {
+  padding: 80px 0 60px 0;
+  text-align: center;
+  color: #fff;
+  margin: auto;
+  width: 800px;
+}
+.intro .intro__title {
+  font-weight: 200;
+  font-size: 32px;
+  color: #fff;
+}
+.intro .intro__body {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  opacity: 0.48;
+  padding: 0 160px;
+  margin: 0;
+}
+  */
 
 /*  стили header ------------------ */
 ol{
@@ -172,8 +198,8 @@ li a{
   text-decoration: none;
   color: rgb(0, 0, 0);
   /* transition: 0.4s; */
-  padding left: 5px;
-  padding right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   display: flex;
   border-radius: 4px;
 }
@@ -200,10 +226,33 @@ ol:hover li a:hover{
 .top{
   float: inline-start;
 }
+/* выравнивание первой страницы ----------------------------- */
 
-.container2{
-  margin-top: 85px;
+.container_one{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
+.catalog-section_img:nth-child(2n){
+  display: flex;
+  text-align: left;
+}
+.catalog-section_img:nth-child(2n+1){
+  display: flex;
+  text-align: right;
+}
+.catalog-section_content:nth-child(2n+1){
+  display: flex;
+  text-align: left;
+}
+.catalog-section_content:nth-child(2n){
+  display: flex;
+  text-align: right;
+}
+
+
 /* стили класса «product» ----------------------------------- */
 
 .servises{

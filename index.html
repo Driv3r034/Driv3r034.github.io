@@ -31,47 +31,41 @@
           </div>
         </div>
       </header>
-
-      <div class="carousel-wrapper" style="height: 400px;">
-        <!--Карусель использует обычные ссылки для циклического просмотра каждого элемента.
-        Ссылки на самом деле нацелены на эти display: none; охватывает, поэтому наша страница не
-        прыгать как обычно при использовании ссылок перехода.-->
-        <span id="target-item-1"></span>
-        <span id="target-item-2"></span>
-        <span id="target-item-3"></span>
-        <!--Вот наша карусель.
-         У каждого есть класс 'carousel-item', который мы используем для общего стиля.
-         и класс item- #, который мы используем для управления его непрозрачностью.
-         в зависимости от того, на какой target-item- # сейчас нацелен-->
-        <div class="carousel-item item-1">
-          <!--Мы можем добавить сюда любой контент, просто убедитесь, что
-           ваш .carousel-wrapper достаточно велик, чтобы вместить весь контент.-->
-          <h2>Item 1</h2>
-          <p>Content goes here.</p>
-          <!--Вот ссылки, управляющие каруселью! Убедиться
-           href каждого из них указывает на правильный целевой элемент- #
-           так что карусель циклически.-->
-          <a class="arrow arrow-prev" href="img/карусель3.jpg"></a>
-          <a class="arrow arrow-next" href="img/карусель2.jpg"></a>
-        </div>
-        <!--А вот еще пара элементов карусели, чтобы
-         у нас есть контент, который нужно прокрутить. Обратите внимание на «легкий» класс?
-         Королевский синий - довольно темный цвет фона, поэтому мы добавим CSS
-         правило, чтобы сделать текст белым, если элемент карусели имеет этот класс-->
-        <div class="carousel-item item-2 light" style="background-color: royalblue;">
-          <h2>Item 2</h2>
-          <p>Content goes here.</p>
-          <a class="arrow arrow-prev" href="img/карусель1.jpg"></a>
-          <a class="arrow arrow-next" href="img/карусель3.jpg"></a>
-        </div>
-        <div class="carousel-item item-3">
-          <h2>Item 3</h2>
-          <p>Content goes here.</p>
-          <a class="arrow arrow-prev" href="img/карусель2.jpg"></a>
-          <a class="arrow arrow-next" href="img/карусель1.jpg"></a>
-        </div>
+      <!--
+      <div class="intro">
+        <p class="intro__body">This experimental carousel uses CSS pseudo classes, attribute values and sibling selectors to imitate a dynamic DOM state.</p>
       </div>
+      -->
+      <div class="carousel">
+        <input type="checkbox" class="faux-ui-facia"> 
+        <div class="slide" annot="Квартиры">
+          <img src="img/карусель5.jpg" alt="Slide 5">
+        </div>
+        
+        
+        <input type="checkbox" class="faux-ui-facia"> 
+        <div class="slide" annot="Аренда">
+          <img src="img/карусель4.jpg" alt="Slide 4">
+        </div>
+      
+        <input type="checkbox" class="faux-ui-facia"> 
+        <div class="slide" annot="Загородная недвижимость">
+          <img src="img/карусель3.jpg"  alt="Slide 3">
+        </div>
+      
+        <input type="checkbox" class="faux-ui-facia">
+        <div class="slide" annot="Коммерческая недвижимость">
+          <img src="img/карусель2.jpg"  alt="Slide 2">
+        </div>
+      
+        <input type="checkbox" class="faux-ui-facia">
+      
+        <div class="slide" annot="Новостройки">
+          <img src="img/карусель1.jpg" alt="Slide 1">
+        </div>
 
+       
+      </div>
 
       <div class="container2">
         <div class="navigation">
@@ -81,7 +75,7 @@
           <div class="center">
             <h2>Выберите интересующие вас разделы и найдите свой объект!</h2>
           </div>
-            <div class="container">
+            <div class="container_one">
               <div class="catalog-section_img">
                 <img src="https://krasivye-mesta.ru/img/The-archipelago-of-Santorini-2.jpg" width="250" height="160" alt="Greece">
               </div>  <!-- end class="img" -->
@@ -100,12 +94,6 @@
                 <div class="catalog-section_content">
                   <p><em>Италия 5 объектов</em></p>
                 </div>  <!-- end class="catalog-section_content" -->
-              <div class="catalog-section_img">
-                <img src="https://datysho.ru/wp-content/uploads/2020/05/5ed3e26f37381.png" width="250" height="160" alt="Georgia">
-              </div>  <!-- end class="img" -->
-                  <div class="catalog-section_content">
-                    <p><em>Грузия 2 объекта</em></p>
-                  </div>  <!-- end class="catalog-section_content" -->
               <div class="catalog-section_img">
                 <img src="https://content.foto.my.mail.ru/mail/axey/17821/h-17822.jpg" width="250" height="160" alt="Armenia">
               </div>  <!-- end class="img" -->
