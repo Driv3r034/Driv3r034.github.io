@@ -228,30 +228,52 @@ ol:hover li a:hover{
 }
 /* выравнивание первой страницы ----------------------------- */
 
+
+.navigation{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.section_1{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .container_one{
   margin-top: 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
-.catalog-section_img:nth-child(2n){
+.cata{
   display: flex;
-  text-align: left;
+  flex-direction: row;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: justify;
 }
-.catalog-section_img:nth-child(2n+1){
+.cata:nth-last-child(2n+1){
   display: flex;
-  text-align: right;
+  flex-direction: row-reverse;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: justify;
 }
-.catalog-section_content:nth-child(2n+1){
+.catalog-section_img{
   display: flex;
-  text-align: left;
-}
-.catalog-section_content:nth-child(2n){
-  display: flex;
-  text-align: right;
-}
+  vertical-align: middle;
+  width: 25%;
+  padding: 2px;
 
+  box-shadow: 0 0 10px rgb(112, 112, 112);
+}
+.catalog-section_content{
+  display: flex;
+  vertical-align: middle;
+  width: 75%;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
 
 /* стили класса «product» ----------------------------------- */
 
@@ -355,7 +377,9 @@ h2{
   /* border: solid 3px rgb(116, 75, 211); */
   color: rgb(255, 255, 255);   /* цвет адреса */
 }
-
+.menu:hover{
+  text-decoration: underline;
+}
 .menu{
   display: flex;
   flex-direction: row;
