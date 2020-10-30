@@ -263,13 +263,13 @@ ol:hover li a:hover{
   vertical-align: middle;
   width: 25%;
   padding: 2px;
-
   box-shadow: 0 0 10px rgb(112, 112, 112);
 }
 .catalog-section_content{
   display: flex;
   vertical-align: middle;
   width: 75%;
+  margin-top: 20px;
   padding-right: 10px;
   padding-left: 10px;
   font-size: 20px;
@@ -317,6 +317,37 @@ ol:hover li a:hover{
 
 
 /* end стили класса «product» ------------------------------ */
+
+#comp{
+  border: 3px solid grey;
+  display: flex;
+  flex-direction: column;
+  width: 97%;
+  text-align: left;
+  margin: 10px;
+  background: url('img/подложкаВозможностей_компании') no-repeat center center rgb(172, 142, 255);
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.comp_col{
+  border: 3px solid rgb(255, 0, 0);
+  display: flex;
+}
+.text_img{
+  border: 3px solid grey;
+  display: flex;
+  vertical-align: text-top;
+}
+.text{
+  border: 3px solid grey;
+  text-align: justify;
+}
+
+
+/* стили персонала ----------------------------------------- */ 
 
 .leftimg{
   float: right;
