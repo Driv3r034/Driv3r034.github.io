@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог с перечнем объектов</title>  <!-- Видно во вкладках. Название страницы -->
+    <title>Каталог с перечнем объектов Trigger Group</title>  <!-- Видно во вкладках. Название страницы -->
     <link rel="stylesheet" href="css/style.css ">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
     <script src="script.js"></script>
@@ -11,15 +11,14 @@
   <body>
     <div class="container">
       <header>
-        <div class="cols">
-          <div class="col">
+        <div class="column">
+          <div class="col4">
             <span class="logo">
               <a href="index.html">
               <img src="img/Логотип.png" width="250" height="160" alt="Логотип Trigger Group"></a>
             </span>
-            <p>Решения с выгодой для вас</p>
           </div>  <!-- end class="col" -->    
-          <div class="col">
+          <div class="col3">
             <nav class="top">   
               <ol>
                 <li><a href="index.html">Главная</a> <!-- index.html -->
@@ -32,7 +31,6 @@
           </div>
         </div>
       </header>
-        <br>
       <div class="container2">
         <div class="navigation">
           <h1>Каталог</h1>
@@ -42,12 +40,11 @@
           <input type="text" name="param2" placeholder="Цена от, ₽" />  <br />
           <input type="text" name="param2" placeholder="до" />  <br /> 
           <p>Количество комнат</p>
-          <label> <input type="checkbox" name="ch1" value="1" />Студия </label>
-          <br /> 
-          <input type="checkbox" name="ch3" value="3" />Однокомнатная  <br /> 
-          <input type="checkbox" name="ch3" value="3" />Двухкомнатная  <br /> 
-          <input type="checkbox" name="ch3" value="3" />Трехкомнатная  <br /> 
-          <input type="checkbox" name="ch3" value="3" />Четырехкомнатная  <br /> 
+          <label> <input type="checkbox" name="ch1" value="1" />Студия </label>   <br /> 
+          <label><input type="checkbox" name="ch3" value="3" />Однокомнатная </label>  <br /> 
+          <label><input type="checkbox" name="ch3" value="3" />Двухкомнатная </label>  <br /> 
+          <label><input type="checkbox" name="ch3" value="3" />Трехкомнатная </label>  <br /> 
+          <label><input type="checkbox" name="ch3" value="3" />Четырехкомнатная </label>  <br /> 
           <br />
           <span>
             <em>Район города</em>
@@ -67,14 +64,15 @@
           <div class="servises">
             <div class="product">
               <h2 class="product-name">Студия</h2>
-              <span class="product-desc">Студия с панорамным видом на море.
+              <span class="product-desc">Студия с панорамным видом.
                   Готовая полностью меблированная студия с потрясающим 
-                  видом на море, в 50метрах от променада и пристани для яхт. 
+                  видом на море, в 50 метрах от променада и пристани для яхт и
+                  прогулочных лодок.
                   Квартира площадью 39 м2 расположенна в новом здании 
                   постройки 2020 года, на второй линии от моря, и полностью 
                   оборудованна мебелью и бытовой техникой, готова к 
                   проживанию.</span><br>
-              <img src="img/студия.jpg" width="350" height="300" class="product-img" alt="квартира студия">
+              <img src="img/студия.jpg" width="250" height="200" class="product-img" alt="квартира студия">
               <div class="offer">
                   <span class="product-price">21 600 001</span>
                   <span class="product-price-currency">RUB</span>
@@ -90,12 +88,12 @@
               <h2 class="product-name">Однокомнатная квартира</h2>
               <span class="product-desc">Квартира подходит как для комфортного проживания 
                   одного человека или пары. В этом комплексе большое 
-                  количество объектов недвижимости. Планировка включает 
-                  жилую и обеденную зону открытого плана, одну спальню 
-                  с двухспальной кроватью, душевую комнату и две террасы. 
+                  количество объектов недвижимости. Планировка 
+                  жилая и обеденная зона открытого плана, одна спальня 
+                  с двухспальной кроватью, душевая комната и две террасы. 
                   В стоимость также входит машиноместо на охраняемой 
                   парковке.</span><br>
-              <img src="img/однокомнатная.png" width="350" height="300" class="product-img" alt="однокомнатная квартира">
+              <img src="img/однокомнатная.png" width="250" height="200" class="product-img" alt="однокомнатная квартира">
               <div class="offer">
                   <span class="product-price">27 041 305</span>
                   <span class="product-price-currency">RUB</span>
@@ -116,7 +114,7 @@
                 привлекательных пространств, включая частные зоны, 
                 где есть место для отдыха, восстановления или 
                 общения.</span><br>
-              <img src="img/двухкомнатная.jpg" width="350" height="300" class="product-img" alt="двухкомнатная квартира">
+              <img src="img/двухкомнатная.jpg" width="250" height="200" class="product-img" alt="двухкомнатная квартира">
               <div class="offer">
                   <span class="product-price">33 789 897</span>
                   <span class="product-price-currency">RUB</span>
@@ -138,7 +136,7 @@
                   комната, 2 спальные комнаты с чудесным видом 
                   с одной стороны на загадочные горы, с другой стороны 
                   на береговую линию.</span><br>
-              <img src="img/трехкомнатная.png" width="350" height="300" class="product-img" alt="трехкомнатная квартира">
+              <img src="img/трехкомнатная.png" width="250" height="200" class="product-img" alt="трехкомнатная квартира">
               <div class="offer">
                   <span class="product-price">36 418 930</span>
                   <span class="product-price-currency">RUB</span>
@@ -160,7 +158,7 @@
                 благодаря чему из большинства квартир 
                 открывается чудесный вид на Средиземное 
                 море и горы Топорос.</span><br>
-              <img src="img/четырехкомнатная.png" width="350" height="300" class="product-img" alt="четырехкомнатная квартира">
+              <img src="img/четырехкомнатная.png" width="250" height="200" class="product-img" alt="четырехкомнатная квартира">
               <div class="offer">
                   <span class="product-price">42 219 333</span>
                   <span class="product-price-currency">RUB</span>
@@ -174,111 +172,85 @@
             </div>
           </div>
               <main id="comp">
-                <p>Компания TRIGGER GROUP поможет вам арендовать или <strong class="partner">купить квартиру в европе.</strong> Мы подберем жилье, которое устроит по цене, 
-                  расположению, уровню комфорта, организуем встречу с владельцем, обеспечим полное юридическое сопровождение сделки. Наши 
-                  специалисты окажут содействие при оформлении ипотеки и ответят на все вопросы. Результат вас порадует!</p>
-                <p>Мы предлагаем вам безграничный выбор объектов. Рынок недвижимости в европе достаточно широк, и вы сможете подобрать 
+                <div class="comp_col">
+                  <div class="text_img"><img src="img/нашиВозможности.png" width="150" height="100" alt="Наши возможности" class="leftimg"></div>
+                  <div class="text"><h2><strong class="partner"><em>Наши возможности</em></strong></h2>
+                  Компания TRIGGER GROUP поможет вам арендовать или <strong class="partner">купить квартиру в европе.</strong> 
+                  Мы подберем жилье, которое устроит по цене, расположению, уровню комфорта, организуем встречу с владельцем, обеспечим полное юридическое 
+                  сопровождение сделки. Наши специалисты окажут содействие при оформлении ипотеки и ответят на все вопросы. Результат вас порадует!
+                  Мы предлагаем вам безграничный выбор объектов. Рынок недвижимости в европе достаточно широк, и вы сможете подобрать 
                   лучшую квартиру в соответствии с бюджетом и своими потребностями. Для тех, кого интересуют готовые к продаже объекты, 
-                  которые можно оценить до звонка или визита в агентство, мы создали собственный каталог с подробным описанием, презентацией и видео.</p>
-                <h2><strong class="partner"><em>Как проходит сотрудничество</em></strong></h2>
-                <p>TRIGGER GROUP занимается продажей квартир на протяжении двадцати лет и предлагает безупречный сервис. Наша работа начнется с беседы, 
+                  которые можно оценить до звонка или визита в агентство, мы создали собственный каталог с подробным описанием, презентацией и видео.</div>
+                </div>
+                <div class="comp_col">
+                  <div class="text_img"><img src="img/сотрудничество.png" width="150" height="100" alt="Сотрудничество" class="leftimg"></div>
+                  <div class="text"><h2><strong class="partner"><em>Как проходит сотрудничество</em></strong></h2>
+                  TRIGGER GROUP занимается продажей квартир на протяжении двадцати лет и предлагает безупречный сервис. Наша работа начнется с беседы, 
                   в ходе которой мы узнаем, какой район или жилой комплекс вас интересует, какие требования вы предъявляете к будущему жилью, на какой 
-                  бюджет рассчитываете. На основе полученной информации мы подберем для вас подходящие варианты и назначим время осмотра.</p>
-                <p>Если условия вас устраивают, мы подготовим все необходимое и проведем сделку. Ее формат и длительность подготовки зависят от типа: 
-                  подписать договор аренды можно уже на первой встрече, а процесс купли-продажи может занять несколько недель.</p>
-                <h2><strong class="partner"><em>Вас заинтересовал каталог</em></strong></h2>
-                <p>В каталоге размещены объекты первичной и вторичной недвижимости. Она сдается в аренду или продается и полностью готова к заселению, 
-                  если вы не планируете делать ремонт.</p>
-                <p>Понравилась одна из квартир, представленных здесь – позвоните нам, и мы предоставим дополнительную информацию о ней, согласуем день 
-                  встречи с владельцем и осмотра помещения.</p>
+                  бюджет рассчитываете. На основе полученной информации мы подберем для вас подходящие варианты и назначим время осмотра.
+                  Если условия вас устраивают, мы подготовим все необходимое и проведем сделку. Ее формат и длительность подготовки зависят от типа: 
+                  подписать договор аренды можно уже на первой встрече, а процесс купли-продажи может занять несколько недель.</div>
+                </div>
+                <div class="comp_col">
+                  <div class="text_img"><img src="img/вашКаталог.png" width="150" height="100" alt="Ваш каталог" class="leftimg"></div>
+                  <div class="text"><h2><strong class="partner"><em>Ваш каталог</em></strong></h2>
+                  В каталоге размещены объекты первичной и вторичной недвижимости. Она сдается в аренду или продается и полностью готова к заселению, 
+                  если вы не планируете делать ремонт. Понравилась одна из квартир, представленных здесь – позвоните нам, и мы предоставим дополнительную 
+                  информацию о ней, согласуем день встречи с владельцем и осмотра помещения.</div>
+                </div>
               </main>
         </div>  <!-- end class="section 1" -->
-        <section class="section 2">
-          <div class="footer text-1">
-            <h2>Индивидуальная консультация</h2>
-          </div>
-          <div class="footer text-2">
-            <h4>Позвоните нам - мы с радостью ответим на ваши вопросы!</h4>
-          </div>
-          <div class="footer-point">
-            <a href="#">Получите консультацию ведущего эксперта</a>
-          </div>
-        </section>
       </div>  <!-- end class="container2" -->
-        <footer class="f print-hidden">
+        <footer class="f_print-hidden">
           <div class="container">
             <div class="w">
-              <div class="row grid">
-                <div class="col left">
+              <div class="row-grid">
+                <span class="logo">
+                  <a href="index.html">
+                  <img src="img/Логотип.png" width="250" height="160" alt="Логотип Trigger Group"></a>
+                </span>
+                <div class="col">
                   <a class="menu" href="#">Компания</a>
                   <a class="menu" href="#">Услуги</a>
                   <a class="menu" href="#">Зарубежная недвижимость</a>
                   <a class="menu" href="#">Ипотека</a>
                   <a class="menu" href="#">Контакты</a>
                 </div>
-                <div class="col center">
-                  <a class="menu" href="#">Каталог</a>
-                    <div class="col center submenu">
-                      <div class="col center submenu-item">
-                        <a href="#">Квартиры</a>
-                      </div>
-                      <div class="col center submenu-item">
-                        <a href="#">Новостройки</a>
-                      </div>
-                      <div class="col center submenu-item">
-                        <a href="#">Коммерческая недвижимость</a>
-                      </div>
-                      <div class="col center submenu-item">
-                        <a href="#">Загородная недвижимость</a>
-                      </div>
-                      <div class="col center submenu-item">
-                        <a href="#">Аренда</a>
-                      </div>  <!-- end class="col center submenu-item" -->
-                    </div>  <!-- end class="col center submenu" -->
-                </div>  <!-- end class="col center" -->
-                <div class="col right">
-                  <div class="col right title"><em>Связаться с нами</em></div>
-                  <div class="contact">
-                    <div class="contact title">
-                      <div class="contacts">
-                        <div class="conainer phone">
-                          <div class="item-icon">
-                            <i class="icon-phone">
-                              
-                            </i>
-                          </div>  <!-- end class="item-icon" -->
-                          <div class="phone">
-                            <a href="tel:+7(795)987-67-67">+7(795)987-67-67</a>
-                          </div>  <!-- end class="phone" -->
-                        </div>  <!-- end class="container phone" -->
-                        <div class="contact mail">
-                          <div class="icon-mail">
-                            <i class="icon-mailmanager">
-                              
-                            </i>
-                          </div>
-                          <div class="mail">
-                          <a href="mailto:info@trigger-group.ru">info@trigger-group.ru</a>
-                          </div>
-                        </div>  <!-- end class="contact mail" -->
-                        <div class="contact adress">
-                          <div class="address icon">
-                            <i class="icon address">
+                <div class="col">
+                  <a class="men" href="#">Каталог</a>
+                    <div class="col">
 
-                            </i>
-                          </div>
-                          <div class="addres">
-                            <address>Танковый проспект 196 офис 1212</address>
-                          </div>
-                        </div>  <!-- end class="contact address" -->
-                      </div>  <!-- end class="contacts" -->
-                    </div>  <!-- end class="contact title" -->
-                  </div>  <!-- end class="contact" -->
-                </div>  <!-- end class="col right" -->
-              </div>  <!-- end class="row grid" -->
+                      <a class="menu" href="#">Квартиры</a>
+ 
+                      <a class="menu" href="#">Новостройки</a>
+
+                      <a class="menu" href="#">Коммерческая недвижимость</a>
+
+                      <a class="menu" href="#">Загородная недвижимость</a>
+
+                      <a class="menu" href="#">Аренда</a>
+
+                    </div>  <!-- end class="col" -->
+                </div>  <!-- end class="col" -->
+                <div class="col">
+
+                  <div class="phone">
+                    <a href="tel:+7(795)987-67-67">+7(795)987-67-67</a>
+                  </div>  <!-- end class="phone" -->
+
+                  <div class="mail">
+                    <a href="mailto:info@trigger-group.ru">info@trigger-group.ru</a>
+                  </div>
+
+                  <div class="addres">
+                    <address>г. Химки ул. Энгельса 6с1.</address>
+                  </div>
+
+                </div>  <!-- end class="col-right" -->
+              </div>  <!-- end class="row-grid" -->
             </div>  <!-- end class="w" -->
           </div>  <!-- end class="container" -->
-        </footer>  <!-- end class="f print-hidden" -->
+        </footer>  <!-- end class="f_print-hidden" -->
     </div> <!-- end class="container" -->
   </body>
 </html>
