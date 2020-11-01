@@ -6,6 +6,7 @@
     <title>Контакты Trigger Group</title>  <!-- Видно во вкладках. Название страницы -->
     <link rel="stylesheet" href="css/style.css ">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 </head>
   <body>
@@ -22,10 +23,10 @@
             <nav class="top">   
               <ol>
                 <li><a href="index.html">Главная</a> <!-- index.html -->
-                <li><a href="about.html">О компании</a>
                 <li><a href="catalog.html">Каталог</a>
-                <li><a href="contact.html">Контакты</a>
                 <li><a href="service.html">Услуги</a>
+                <li><a href="about.html">О компании</a>
+                <li><a href="contact.html">Контакты</a>
               </ol>
             </nav>
           </div>
@@ -98,7 +99,35 @@
           <div>
             <h3>Если у вас появились вопросы, напишите нам!</h3>
           </div>
-        </div>
+        <div>
+          <div class="cont-col">
+                <form action="form12">
+                    <div class="row">
+                      <label>Ваше имя:</label><br>
+                        <input required type="text" name="name" value="" autocomplete="off"> 
+                    </div>
+                    <br>
+                    <div class="row">
+                      <label>Ваш E-mail:</label><br>
+                        <input required type="text" name="e-mail" value="" autocomplete="off"> 
+                    </div>
+                    <br>
+                    <div class="row">
+                      <label>Ваш телефон:</label><br>
+                        <input required type="text" name="number" value="" autocomplete="off"> 
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row_message">
+                      <textarea required name="message" placeholder="Введите сообщение"></textarea>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <input type="submit" value="Отправить" class="button">
+                    </div>
+                </form>
+          </div>
+        </div>  
         <footer class="f_print-hidden">
           <div class="container">
             <div class="w">
@@ -149,6 +178,7 @@
             </div>  <!-- end class="w" -->
           </div>  <!-- end class="container" -->
         </footer>  <!-- end class="f_print-hidden" -->
+      </div>
     </div> <!-- end class="container" -->
   </body>
 </html>
