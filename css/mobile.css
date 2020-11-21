@@ -1,0 +1,41 @@
+/* @media screen and (orientation: landscape){
+    body{
+        transform: rotate(90deg);
+    }
+}   */
+/* для поворота экрана */
+
+.container{
+    width: 500px;
+    font-size: 8px;
+}
+.logo{
+    display: none;
+}
+ol{
+    margin-left: -100px;
+    width: auto;
+}
+li{
+    text-align: center;
+    width: 100%;
+    font-size: 10px;
+    background-color: tomato;
+}
+.catalog-section_content{
+    font-size: 10px;
+}
+.home_img{
+    width: 120px;
+    height: 120px;
+}
+.top a::after{
+    content: attr();
+}
+.row-grid{
+    font-size: 9px;
+}
+.f_print-hidden{
+    background-color: violet;
+    width: auto;
+}

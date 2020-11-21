@@ -32,10 +32,13 @@ header{
 .col3{
   display: flex;
   width: 80%;
-  margin-top: 20px;
+  margin-top: 44px;
   justify-content: space-around;
 }
-
+.pro{
+  width: 300px;
+  height: 160px;
+}
 /* стили карусели  ------------------*/
 
 
