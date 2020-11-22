@@ -37,9 +37,9 @@ li{
   width: 120px;
   height: 120px;
 }
-.top a::after{
+/* .top a::after{
   content: attr();
-}
+} */
 .row-grid{
   font-size: 9px;
 }
