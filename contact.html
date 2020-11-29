@@ -39,15 +39,14 @@
           <div class="contacts block title">
             <h3><em>Как до нас добраться</em></h3>
           </div>
-          <div class="container">
+          <div itemscope itemtype="http://schema.org/Organization" class="container">
             <main id="company">
-            <p><strong class="partner">от м. Старый город</strong></p>
-            <p>Офис расположен в сердце Старого города, поэтому приготовьтесь, что подъехать вплотную к ней не удастся — придется пройти. 
-              Но чаще всего в Офис попадают в процессе обзорной экскурсии по городу, если пришло время.
-              Официальный адрес: г. Химки ул. Энгельса 6с1. Ближайшие к офису автобусные остановки: <em>Таль и Плат.</em> 
-              Часы работы: <em>с 9-00 до 21-00.</em> Заказать осмотр квартиры можно по тел.: +7(796)901-37-10 или на сайте info@trigger-group.ru.</p>
+              <p><strong class="partner">от м. Старый город</strong></p>
+              <p>Офис расположен в сердце Старого города, поэтому приготовьтесь, что подъехать вплотную к ней не удастся — придется пройти.</p> 
+              <p>Ближайшие к офису автобусные остановки: <em>Таль и Плат.</em></p>
+              <P>Заказать осмотр квартиры можно по тел.: +7(796)901-37-10 или на сайте info@trigger-group.ru.</p>
             </main>
-            <div class="iframe_nav" style="position:relative;overflow:hidden;">
+            <div itemprop="areaServed" class="iframe_nav" style="position:relative;overflow:hidden;">
               <a class="maps_nav" href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" 
               style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a>
               <a class="maps_nav" href="https://yandex.ru/maps/213/moscow/?ll=37.443005%2C55.895023&mode=routes&rtext=~55.895095%2C37.442206&rtt=auto&ruri=~&utm_medium=mapframe&utm_source=maps&z=17.4" 
@@ -60,12 +59,12 @@
                     
                   </i>
                 </div>  <!-- end class="item-icon" -->
-                <div class="phone">
+                <div itemprop="telephone" class="phone">
                   <a href="tel:+7(795)987-67-67">+7(795)987-67-67</a>
                 </div>  <!-- end class="phone" -->
               </div>  <!-- end class="container phone" -->
               <div class="working hours">
-                <p><strong class="partner">
+                <p><strong class="partner">         <!-- datetime="Mo-Fr 9:00−21:00, Sa 10:00−14:00"-->
                   с 9:00 до 21:00 - пн-пт <br />
                   с 10:00 до 14:00 - сб <br />
                   выходной - вс.</strong></p>
@@ -76,7 +75,7 @@
                     
                   </i>
                 </div>
-                <div class="mail">
+                <div itemprop="email" class="mail">
                 <a href="mailto:info@trigger-group.ru">info@trigger-group.ru</a>
                 </div>
               </div>  <!-- end class="contact mail" -->
@@ -86,8 +85,9 @@
 
                   </i>
                 </div>
-                <div class="addres">
-                  <address>г. Химки ул. Энгельса 6с1.</address>
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="addres">
+                  <span itemprop="addressLocality">г. Химки</span>
+                  <span itemprop="streetAddress">ул. Энгельса 6с1.</span>
                 </div>
               </div>  <!-- end class="contact address" -->
             </div>  <!-- end class="contacts" -->

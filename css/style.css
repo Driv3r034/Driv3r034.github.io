@@ -421,24 +421,27 @@ h2{
 
 /* стили персонала ----------------------------------------- */ 
 
-.leftimg{
+/* .leftimg{
   float: right;
   margin: 7px 7px 7px 5px;
-}
+} */
 .text{
   clear: right;
 }
 .staff{
   display: flex;
+  justify-content: space-between;
   border-collapse: collapse;
   width: 100%;
 }
 .staff_foto{
+  width: 24%;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  letter-spacing: -0.1px;
 }
 
 

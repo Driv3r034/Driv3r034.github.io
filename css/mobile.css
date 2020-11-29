@@ -30,6 +30,12 @@ li{
   width: 100%;
   font-size: 10px;
 }
+ol:hover li a:hover{
+  font-size: 10px;
+  filter: blur(0px);
+  background-color: #d3d3d3;
+  text-decoration: underline;
+}
 .catalog-section_content{
   font-size: 10px;
 }
@@ -37,9 +43,9 @@ li{
   width: 120px;
   height: 120px;
 }
-.top a::after{
+/* .top a::after{
   content: attr();
-}
+} */
 .row-grid{
   font-size: 9px;
 }
@@ -59,7 +65,7 @@ li{
   /* border: solid 3px rgb(155, 153, 38); */
 	}
 
-	/* стили КАТАЛОГА */
+              	/* стили КАТАЛОГА */
 .servises{
 	width: 450px;
 	margin-left: 5px;
@@ -79,10 +85,10 @@ li{
 	width: 100%;
 }
 .product-name{
-	margin-bottom: -0.2rem;
+	margin-bottom: 0.5rem;
 }
 .product-desc{
-	text-align: right;
+  text-align: right;
 }
 .offer{
 	margin-top: -100px;
@@ -98,7 +104,7 @@ li{
 	width: 90%;
 	margin-left: 5px;
 }
-								/* Стили УСЛУГ */
+								/* cтили УСЛУГ */
 .co{
 	width: 100%;
 }
