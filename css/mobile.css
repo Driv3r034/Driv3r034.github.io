@@ -4,10 +4,12 @@
     }
 }   */
 /* для поворота экрана */
-.container{
+@media screen and (max-width: 768px){
+  .container{
     width: 500px;
-		font-size: 8px;
-		/* border: solid 1px rgb(78, 187, 5); */
+    font-size: 8px;
+    /* border: solid 1px rgb(78, 187, 5); */
+  }
 }
 .logo{
   display: none;
@@ -63,7 +65,92 @@ ol:hover li a:hover{
   height: 100px;
   font-size: 7px; /* шрифт телефона, адреса, мыла */
   /* border: solid 3px rgb(155, 153, 38); */
-	}
+}
+                     /* выпадающее меню Каталога  */
+.top ol li{
+  padding: 10px;
+}
+.top ol li, .top ul{
+  display: inline-block;
+  transition: all .1s ease-out;
+  perspective: 500px;
+}
+.top ol ul{
+  display: none;
+  position: absolute;
+  width: 200px;
+  background-color: rgb(197, 179, 179);
+  margin-top: 10px;
+  margin-left: -45px;
+  border-radius: 15px;
+  /* visibility: hidden; */
+  transform-origin: 50% 0;
+}
+.top ol ul a{
+  color: #4170fc;
+  text-decoration: none;
+}
+.top ol ul a:hover{
+  color: #b30095;
+  text-decoration: none;
+}
+.top li:hover ul{
+  display: block;
+  background-color: rgb(197, 179, 179);
+  visibility: visible;
+  animation: top 1s ease;
+  box-shadow: 0 0 5px #000;
+}
+a:-webkit-any-link{
+  cursor: pointer;
+  
+}
+.top a{
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  /* color: #4170fc; */
+  text-shadow: 0 1px 1px #fff;
+  line-height: 4px;
+  white-space: nowrap;
+}
+@keyframes top{
+  0%{
+    opacity: 0.999;
+    transform: rotateX(90deg);
+    animation-timing-function: ease-in-out;
+  }
+  40%{
+    transform: rotateX(-20deg) rotateY(7deg);
+  }
+  60%{
+    transform: rotateX(20deg) rotateY(-5deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+a.top-list::after {
+  content: " ";
+  position: absolute;
+  border: 7px solid;
+  border-color: transparent transparent transparent black;
+  top: 14px;
+  right: -7px;
+  transition: 0.3s;
+}
+a.top-list:hover::after{
+  transform: rotateZ(90deg);
+  content: " ";
+  position: absolute;
+  border: 7px solid;
+  border-color: transparent transparent transparent black;
+  top: 0px;
+  right: -10px;
+  transition: 0.3s;
+}
 
               	/* стили КАТАЛОГА */
 .servises{
@@ -104,6 +191,49 @@ ol:hover li a:hover{
 	width: 90%;
 	margin-left: 5px;
 }
+      /* стили product-catalog -----------*/
+.servises{
+	width: 450px;
+  margin-left: 5px;
+  padding-top: 20px;
+}
+.product-name-catalog{
+	margin-top: -12px;
+	font-size: 10px;
+}
+.product-img-catalog{
+	margin-left: 250px;
+	margin-top: -80px;
+	margin-bottom: 10px;
+	width: 200px;
+	height: 160px;
+}
+.product-catalog{
+  width: 100%;
+  font-size: 1em;
+}
+.product-name-catalog{
+	margin-bottom: 0.5rem;
+}
+.product-desc-catalog{
+  text-align: left;
+  font-size: 8px;
+}
+.offer{
+	margin-top: -100px;
+}
+#comp{
+	font-size: 6.5px;
+}
+.img_catalog{
+	width: 100px;
+	height: 70px;
+}
+.text{
+	width: 90%;
+	margin-left: 5px;
+}
+
 								/* cтили УСЛУГ */
 .co{
 	width: 100%;
