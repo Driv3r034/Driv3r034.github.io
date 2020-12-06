@@ -205,13 +205,13 @@ li a{
   display: flex;
   border-radius: 4px;
 }
-ol:hover li a{
+/* ol:hover li a{
   filter: blur(2px);
-}
+} */
 ol:hover li a:hover{
   font-size: 20px;
   filter: blur(0px);
-  background-color: #d3d3d3;
+  /* background-color: #d3d3d3; */
   text-decoration: underline;
 }
 
@@ -229,13 +229,99 @@ ol:hover li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 13;
 }
 h2{
   text-align: center;
   margin-bottom: 25px;
 }
-/* выравнивание первой страницы ----------------------------- */
 
+         /* выпадающее меню Каталога  */
+.top ol li{
+  padding: 10px;
+}
+.top ol li, .top ul{
+  display: inline-block;
+  transition: all .1s ease-out;
+  perspective: 500px;
+}
+.top ol ul{
+  display: none;
+  position: absolute;
+  width: 200px;
+  background-color: rgb(197, 179, 179);
+  margin-top: 10px;
+  margin-left: -45px;
+  border-radius: 15px;
+  /* visibility: hidden; */
+  transform-origin: 50% 0;
+}
+.top ol ul a{
+  color: #4170fc;
+  text-decoration: none;
+}
+.top ol ul a:hover{
+  color: #b30095;
+  text-decoration: none;
+}
+.top li:hover ul{
+  display: block;
+  background-color: rgb(197, 179, 179);
+  visibility: visible;
+  animation: top 1s ease;
+  box-shadow: 0 0 5px #000;
+}
+a:-webkit-any-link{
+  cursor: pointer;
+}
+.top a{
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  /* color: #4170fc; */
+  text-shadow: 0 1px 1px #fff;
+  line-height: 4px;
+  white-space: nowrap;
+}
+@keyframes top{
+  0%{
+    opacity: 0.999;
+    transform: rotateX(90deg);
+    animation-timing-function: ease-in-out;
+  }
+  40%{
+    transform: rotateX(-20deg) rotateY(7deg);
+  }
+  60%{
+    transform: rotateX(20deg) rotateY(-5deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+a.top-list::after {
+  content: " ";
+  position: absolute;
+  border: 7px solid;
+  border-color: transparent transparent transparent black;
+  top: 14px;
+  right: -7px;
+  transition: 0.3s;
+}
+a.top-list:hover::after{
+  transform: rotateZ(90deg);
+  content: " ";
+  position: absolute;
+  border: 7px solid;
+  border-color: transparent transparent transparent black;
+  top: 0px;
+  right: -10px;
+  transition: 0.3s;
+}
+
+/* выравнивание первой страницы ----------------------------- */
 
 .navigation{
   text-align: center;
@@ -318,8 +404,7 @@ h2{
   display: flex;
   vertical-align: super;
   align-items: center;
-  
-}
+  }
 .uslugi li{
   list-style: none;
   margin: 5px;
@@ -329,7 +414,6 @@ h2{
 }
 
 /* стили контактов -------------------------------------- */
-
 .button {
   display: block;
   width: 18%;
@@ -368,8 +452,7 @@ h2{
   font-size: 1.5rem; 
 }
 .product-desc {
-  padding-bottom: 5rem; 
-      
+  padding-bottom: 5rem;
 }
 .product{
   white-space: pre-line;
@@ -392,7 +475,67 @@ h2{
   float: right; 
   margin: 0 1px 1px 0;
 }
-
+.pagination{
+  display: table;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 25px;
+}
+.pagination a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 8px 18px;
+  padding-top: 8px;
+  padding-right: 18px;
+  padding-bottom: 8px;
+  padding-left: 18px;
+}
+.pagination a.active{
+  background: #d041ecb0;
+  color: #fff;
+  border-radius: 7px;
+}
+.pagination a:hover {
+  background-color: rgba(128, 128, 128, 0.342);
+  border-radius: 7px;
+}
+.pagination a:visited{
+  background-color: none;
+}
+.pagination a:disabled{
+  pointer-events: none;
+  background-color: none;
+  text-decoration: none;
+  cursor: default;
+  color: none;
+}
+        /* стили product-catalog --------------------------- */
+.product-catalog{
+  white-space: pre-line;
+  float: left;
+  width: 91%;
+  border: solid 1px lightslategray;
+  box-shadow: rgb(0, 0, 0) 0 0 15px;
+  border-radius: 10px;
+  margin: 2%;
+  padding: 2%;
+  background-color: rgb(197, 179, 179);  
+  font-size: 2rem;
+}
+.product-img-catalog{
+  width: 100%;
+  height: 100%;
+}
+.product-desc-catalog{
+  /* border: navy solid 3px; */
+  display: table-cell;
+  width: 900px;
+  font-size: 30px;
+  text-align: justify;
+}
 
 /* end стили класса «product» ------------------------------ */
 
@@ -418,7 +561,6 @@ h2{
   text-align: justify;
 }
 
-
 /* стили персонала ----------------------------------------- */ 
 
 /* .leftimg{
@@ -443,7 +585,6 @@ h2{
   margin-bottom: 10px;
   letter-spacing: -0.1px;
 }
-
 
 /* стили подвала ---------------------------------------------*/
 .f_print-hidden{
