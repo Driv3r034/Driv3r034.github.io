@@ -35,7 +35,7 @@ li{
 ol:hover li a:hover{
   font-size: 10px;
   filter: blur(0px);
-  background-color: #d3d3d3;
+  /* background-color: #d3d3d3; */
   text-decoration: underline;
 }
 .catalog-section_content{
@@ -68,9 +68,13 @@ ol:hover li a:hover{
 }
                      /* выпадающее меню Каталога  */
 .top ol li{
-  padding: 10px;
+  padding: 15px;
 }
-.top ol li, .top ul{
+.top ul li{
+  padding: 5px;
+  margin-left: 10px;
+}
+.top ol li .top ul{
   display: inline-block;
   transition: all .1s ease-out;
   perspective: 500px;
@@ -78,17 +82,18 @@ ol:hover li a:hover{
 .top ol ul{
   display: none;
   position: absolute;
-  width: 200px;
+  width: 100px;
   background-color: rgb(197, 179, 179);
-  margin-top: 10px;
-  margin-left: -45px;
+  margin-top: 15px;
+  margin-left: -24px;
   border-radius: 15px;
-  /* visibility: hidden; */
+  visibility: hidden;
   transform-origin: 50% 0;
 }
 .top ol ul a{
   color: #4170fc;
   text-decoration: none;
+  margin-left: -30px;
 }
 .top ol ul a:hover{
   color: #b30095;
@@ -103,7 +108,6 @@ ol:hover li a:hover{
 }
 a:-webkit-any-link{
   cursor: pointer;
-  
 }
 .top a{
   text-decoration: none;
@@ -113,6 +117,7 @@ a:-webkit-any-link{
   text-shadow: 0 1px 1px #fff;
   line-height: 4px;
   white-space: nowrap;
+  
 }
 @keyframes top{
   0%{
@@ -135,20 +140,20 @@ a:-webkit-any-link{
 a.top-list::after {
   content: " ";
   position: absolute;
-  border: 7px solid;
+  border: 3px solid;
   border-color: transparent transparent transparent black;
-  top: 14px;
-  right: -7px;
+  top: 18px;
+  right: 5px;
   transition: 0.3s;
 }
 a.top-list:hover::after{
   transform: rotateZ(90deg);
   content: " ";
   position: absolute;
-  border: 7px solid;
+  border: 3px solid;
   border-color: transparent transparent transparent black;
-  top: 0px;
-  right: -10px;
+  top: 1px;
+  right: -7px;
   transition: 0.3s;
 }
 

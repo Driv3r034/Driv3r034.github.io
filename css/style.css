@@ -18,6 +18,7 @@ header{
   display: flex;
   background: rgba(194, 194, 194, 0.596);
   width: auto;
+  border-radius: 9px;
 }
 /*  стили header ------------------ */
 .column{
@@ -37,11 +38,10 @@ header{
 }
 .pro{
   width: 300px;
-  height: 160px;
+  height: 140px;
 }
+
 /* стили карусели  ------------------*/
-
-
 .carousel{
   background-color: #222224;
   background-image: linear-gradient(#0040ff,#252a35);
@@ -414,9 +414,16 @@ a.top-list:hover::after{
 }
 
 /* стили контактов -------------------------------------- */
+.navigation{
+  /* border: 3px solid rgb(240, 109, 2); */
+}
+#company-contact{
+  width: 54.5%;
+  /* border: 3px solid rgb(163, 8, 235); */
+}
 .button {
   display: block;
-  width: 18%;
+  width: 27%;
   background: orange;
   color: white;
   text-align: center;
@@ -425,8 +432,12 @@ a.top-list:hover::after{
   padding: 10px 20px;
   border-radius: 5px;
 }
-.form12{
-  width: 55px;
+.form13{
+  width: 40%;
+  /* border: 3px solid rgb(22, 207, 5); */
+  margin-top: 1%;
+  margin-left: 59%;
+  margin-bottom: 20%;
 }
 .cont-col input:required {
   height: 25px;
@@ -435,7 +446,23 @@ a.top-list:hover::after{
 .row_message{
   height: 40px;
   width: 240px;
+  /* border: 3px solid rgb(235, 8, 178); */
 }
+
+.center2{
+  /* border: 3px solid rgb(8, 235, 197); */
+  width: 40%;
+  margin-top: -460px;
+  margin-left: 59%;
+  font-size: 0.9em;
+}
+.contacts{
+  /* border: 3px solid rgb(238, 4, 4); */
+  width: 22%;
+  margin-top: -15%;
+  margin-left: 59%;
+}
+
 
 /* стили класса «product» ----------------------------------- */
 
@@ -593,6 +620,7 @@ a.top-list:hover::after{
   height: 300px;
   /* border: solid 5px rgb(78, 187, 5); */
   background-color: rgb(0, 0, 0);
+  border-radius: 9px;
 }
 .w{
   display: flex;
