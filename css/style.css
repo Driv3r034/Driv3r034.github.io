@@ -421,6 +421,9 @@ a.top-list:hover::after{
   width: 54.5%;
   /* border: 3px solid rgb(163, 8, 235); */
 }
+iframe{
+  border: 0px;
+}
 .button {
   display: block;
   width: 27%;
@@ -434,7 +437,7 @@ a.top-list:hover::after{
 }
 .form13{
   width: 40%;
-  /* border: 3px solid rgb(22, 207, 5); */
+  border: 3px solid rgb(22, 207, 5);
   margin-top: 1%;
   margin-left: 59%;
   margin-bottom: 20%;
@@ -455,9 +458,10 @@ a.top-list:hover::after{
   margin-top: -460px;
   margin-left: 59%;
   font-size: 0.9em;
+  margin-bottom: 15px;
 }
 .contacts{
-  /* border: 3px solid rgb(238, 4, 4); */
+  border: 3px solid rgb(238, 4, 4);
   width: 22%;
   margin-top: -15%;
   margin-left: 59%;
